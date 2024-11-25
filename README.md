@@ -124,12 +124,16 @@ Execute a specific suite:
   mvn test -DsuiteXmlFile=testng/TestNGRunSmokeTests.xml
 ```
 
-### **Run Using IDE**
-1. Open runner classes in the `runners` folder.
-2. Right-click on a runner and select:
+### **Run Using IntelliJ IDEA**
+1. Open the `src/test/resources` folder in the Project view.
+2. Locate the specific TestNG XML file (e.g., `TestNGRunSmokeTests.xml`).
+3. Right-click on the file and select:
    ```text
-   Run as TestNG Test
+   Run 'TestNGRunSmokeTests.xml'
    ```
+4. In the corresponding runner class present in `src/test/java/com/cucumbercraft/runners`, make sure the @CucumberOptions annotation includes the correct tags (e.g., @Smoke, @Regression).
+
+---
 
 ### **Run Specific Tags**
 Filter tests by Cucumber tags:
